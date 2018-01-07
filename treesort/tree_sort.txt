@@ -1,0 +1,24 @@
+tree_insert(val, root):
+
+  new_node = tree_node_create(val, 0, 0)
+
+  loop:
+    val_root = root.val
+    if (val <= val_root):
+          # Recorrer arbol izquierdo
+          puntero = root.izda
+          if puntero != NULL:
+                root = puntero (root.izda)
+                continue (volver al principio del loop)
+          else:
+                root.izda = new_node
+                break (sale del bucle)
+    else:
+          # Recorrer arbol derecho
+          puntero = root.dcha
+          if puntero != NULL:
+                root = puntero (root.dcha)
+                continue
+          else:
+                root.dcha = new_node
+                break
